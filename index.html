@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Secure Random Password Generator | Free Offline Tool</title>
+    <meta name="description" content="Generate strong, secure, and random passwords completely offline. Protect your online accounts with our free password generator. Evaluates password strength instantly.">
+    <link rel="canonical" href="https://password-generator.corelumetech.in/">
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://password-generator.corelumetech.in/">
+    <meta property="og:title" content="Secure Random Password Generator | Free Offline Tool">
+    <meta property="og:description" content="Generate strong, secure, and random passwords completely offline. Protect your online accounts with our free password generator. Evaluates password strength instantly.">
+    <meta property="og:image" content="https://password-generator.corelumetech.in/og-image.jpg">
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://password-generator.corelumetech.in/">
+    <meta property="twitter:title" content="Secure Random Password Generator | Free Offline Tool">
+    <meta property="twitter:description" content="Generate strong, secure, and random passwords completely offline. Protect your online accounts with our free password generator. Evaluates password strength instantly.">
+    <meta property="twitter:image" content="https://password-generator.corelumetech.in/og-image.jpg">
+
+    <!-- Schema.org JSON-LD -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebApplication",
+      "name": "Password Generator",
+      "url": "https://password-generator.corelumetech.in/",
+      "description": "Generate strong, secure, and random passwords offline.",
+      "applicationCategory": "SecurityApplication",
+      "operatingSystem": "All",
+      "offers": {
+        "@type": "Offer",
+        "price": "0"
+      }
+    }
+    </script>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script src="https://quge5.com/88/tag.min.js" data-zone="265070" async data-cfasync="false"></script>
+</head>
+<body>
+    <div class="app-container">
+
+
+        <main class="generator-container">
+            <h1 class="title">Password Generator</h1>
+            <p class="subtitle">Create strong and secure passwords instantly.</p>
+
+            <div class="result-container">
+                <span id="result">Click Generate</span>
+                <button class="btn-copy" id="btn-copy" title="Copy to clipboard">
+                    <i class="fa-regular fa-copy"></i>
+                </button>
+            </div>
+
+            <div class="strength-container">
+                <div class="strength-label">
+                    <span>Strength:</span>
+                    <span id="strength-text">Medium</span>
+                </div>
+                <div class="strength-bars">
+                    <div class="bar" id="bar-1"></div>
+                    <div class="bar" id="bar-2"></div>
+                    <div class="bar" id="bar-3"></div>
+                    <div class="bar" id="bar-4"></div>
+                </div>
+            </div>
+
+            <div class="settings">
+                <div class="setting-length">
+                    <div class="length-label">
+                        <span>Character Length</span>
+                        <span id="length-val">16</span>
+                    </div>
+                    <input type="range" id="length-slider" min="6" max="32" value="16">
+                </div>
+
+                <div class="setting-checkboxes">
+                    <label class="checkbox-container">
+                        <input type="checkbox" id="uppercase" checked>
+                        <span class="checkmark"></span>
+                        Include Uppercase Letters
+                    </label>
+                    <label class="checkbox-container">
+                        <input type="checkbox" id="lowercase" checked>
+                        <span class="checkmark"></span>
+                        Include Lowercase Letters
+                    </label>
+                    <label class="checkbox-container">
+                        <input type="checkbox" id="numbers" checked>
+                        <span class="checkmark"></span>
+                        Include Numbers
+                    </label>
+                    <label class="checkbox-container">
+                        <input type="checkbox" id="symbols" checked>
+                        <span class="checkmark"></span>
+                        Include Symbols
+                    </label>
+                </div>
+            </div>
+
+            <button class="btn-generate" id="btn-generate">
+                GENERATE <i class="fa-solid fa-arrow-right"></i>
+            </button>
+        </main>
+
+
+    </div>
+    <!-- Toast -->
+    <div id="toast" class="toast">Copied to clipboard!</div>
+    <script src="script.js"></script>
+</body>
+</html>
