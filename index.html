@@ -51,56 +51,82 @@
             <h1 class="title">Password Generator</h1>
             <p class="subtitle">Create strong and secure passwords instantly.</p>
 
-            <div class="result-container">
-                <span id="result">Click Generate</span>
-                <button class="btn-copy" id="btn-copy" title="Copy to clipboard">
-                    <i class="fa-regular fa-copy"></i>
-                </button>
+            <div class="mode-tabs">
+                <button class="mode-tab active" data-mode="password" id="tab-password">Password</button>
+                <button class="mode-tab" data-mode="passphrase" id="tab-passphrase">Passphrase</button>
             </div>
 
-            <div class="strength-container">
-                <div class="strength-label">
-                    <span>Strength:</span>
-                    <span id="strength-text">Medium</span>
+            <div class="result-wrapper">
+                <div class="result-container">
+                    <span id="result">Click Generate</span>
+                    <button class="btn-copy" id="btn-copy" title="Copy to clipboard">
+                        <i class="fa-regular fa-copy"></i>
+                    </button>
                 </div>
-                <div class="strength-bars">
-                    <div class="bar" id="bar-1"></div>
-                    <div class="bar" id="bar-2"></div>
-                    <div class="bar" id="bar-3"></div>
-                    <div class="bar" id="bar-4"></div>
+                <div class="progress-container">
+                    <div class="progress-bar" id="progress-bar"></div>
+                </div>
+                <div class="strength-label-text">
+                    <span id="strength-text">Medium</span>
                 </div>
             </div>
 
             <div class="settings">
-                <div class="setting-length">
-                    <div class="length-label">
-                        <span>Character Length</span>
-                        <span id="length-val">16</span>
+                <div id="password-settings">
+                    <div class="setting-length">
+                        <div class="length-label">
+                            <span>Character Length</span>
+                            <span id="length-val">16</span>
+                        </div>
+                        <input type="range" id="length-slider" min="6" max="64" value="16">
                     </div>
-                    <input type="range" id="length-slider" min="6" max="32" value="16">
+
+                    <div class="setting-checkboxes">
+                        <label class="checkbox-container">
+                            <input type="checkbox" id="uppercase" checked>
+                            <span class="checkmark"></span>
+                            Include Uppercase
+                        </label>
+                        <label class="checkbox-container">
+                            <input type="checkbox" id="lowercase" checked>
+                            <span class="checkmark"></span>
+                            Include Lowercase
+                        </label>
+                        <label class="checkbox-container">
+                            <input type="checkbox" id="numbers" checked>
+                            <span class="checkmark"></span>
+                            Include Numbers
+                        </label>
+                        <label class="checkbox-container">
+                            <input type="checkbox" id="symbols" checked>
+                            <span class="checkmark"></span>
+                            Include Symbols
+                        </label>
+                        <label class="checkbox-container">
+                            <input type="checkbox" id="exclude-ambiguous">
+                            <span class="checkmark"></span>
+                            Exclude ambiguous (i, l, 1, L, o, 0, O)
+                        </label>
+                    </div>
                 </div>
 
-                <div class="setting-checkboxes">
-                    <label class="checkbox-container">
-                        <input type="checkbox" id="uppercase" checked>
-                        <span class="checkmark"></span>
-                        Include Uppercase Letters
-                    </label>
-                    <label class="checkbox-container">
-                        <input type="checkbox" id="lowercase" checked>
-                        <span class="checkmark"></span>
-                        Include Lowercase Letters
-                    </label>
-                    <label class="checkbox-container">
-                        <input type="checkbox" id="numbers" checked>
-                        <span class="checkmark"></span>
-                        Include Numbers
-                    </label>
-                    <label class="checkbox-container">
-                        <input type="checkbox" id="symbols" checked>
-                        <span class="checkmark"></span>
-                        Include Symbols
-                    </label>
+                <div id="passphrase-settings" style="display: none;">
+                    <div class="setting-length">
+                        <div class="length-label">
+                            <span>Word Count</span>
+                            <span id="word-count-val">3</span>
+                        </div>
+                        <input type="range" id="word-count-slider" min="2" max="10" value="3">
+                    </div>
+                    <div class="setting-dropdown">
+                        <label>Separator</label>
+                        <select id="separator-select" class="glass-select">
+                            <option value="-">Hyphen (-)</option>
+                            <option value="_">Underscore (_)</option>
+                            <option value=" ">Space ( )</option>
+                            <option value=".">Period (.)</option>
+                        </select>
+                    </div>
                 </div>
             </div>
 
