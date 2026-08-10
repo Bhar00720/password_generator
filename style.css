@@ -20,13 +20,21 @@
 }
 
 body {
-    background-color: var(--bg-color);
-    color: var(--text-primary);
+    background: linear-gradient(-45deg, #0f172a, #831843, #0f172a, #0f766e);
+    background-size: 400% 400%;
+    animation: gradientBG 15s ease infinite;
+    color: #f8fafc;
     min-height: 100vh;
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
     padding: 20px;
+}
+@keyframes gradientBG {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
 }
 
 .app-container {
@@ -39,14 +47,20 @@ body {
 }
 
 
-.generator-container {
+.generator-container, .card, .main-content {
     width: 100%;
     max-width: 500px;
-    background-color: var(--card-bg);
     padding: 30px;
+    background: rgba(15, 23, 42, 0.4);
+    backdrop-filter: blur(15px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
     border-radius: 16px;
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
-    border: 1px solid var(--border-color);
+}
+.seo-footer {
+    max-width: 800px;
+    text-align: center;
+    margin-top: 20px;
 }
 
 .title {
