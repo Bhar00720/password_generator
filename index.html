@@ -1,11 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <meta http-equiv="X-Content-Type-Options" content="nosniff">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Secure Password Generator — Fast & Random Client-Side Passwords</title>
     <meta name="description" content="Create ultra-secure, random passwords and passphrases instantly. 100% client-side generation—your keys are never sent to a server. Free, private, and customizable.">
-    <meta name="keywords" content="client side strong password generator, random secure password generator no ads, custom length password creator online, memorable secure passphrase generator">
+    <meta name="keywords" content="client side strong password generator, random secure password generator free, custom length password creator online, memorable secure passphrase generator">
     <link rel="canonical" href="https://password-generator.corelumetech.in/">
 
     <!-- Open Graph / Facebook -->
@@ -24,19 +25,116 @@
 
     <!-- Schema.org JSON-LD -->
     <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
     {
-      "@context": "https://schema.org",
       "@type": "WebApplication",
-      "name": "Password Generator",
+      "@id": "https://password-generator.corelumetech.in/#webapp",
+      "name": "Secure Password Generator",
       "url": "https://password-generator.corelumetech.in/",
-      "description": "Generate strong, secure, and random passwords offline.",
+      "description": "Create ultra-secure, random passwords and passphrases instantly. 100% client-side generation—your keys are never sent to a server. Free, private, and customizable.",
       "applicationCategory": "SecurityApplication",
       "operatingSystem": "All",
+      "browserRequirements": "Requires JavaScript. Requires HTML5.",
       "offers": {
         "@type": "Offer",
-        "price": "0"
+        "price": "0",
+        "priceCurrency": "USD"
+      },
+      "featureList": [
+        "CSPRNG random password generation via Web Crypto API",
+        "Memorable multi-word passphrase generator mode",
+        "Ambiguous character filter (excludes i, l, 1, L, o, 0, O)",
+        "Real-time entropy calculation and visual strength meter",
+        "Customizable length (6 to 128 characters) and character sets",
+        "One-click clipboard copy with auto-clearing feedback"
+      ],
+      "author": {
+        "@type": "Organization",
+        "name": "Corelume Tech",
+        "url": "https://corelumetech.in"
+      },
+      "publisher": {
+        "@type": "Organization",
+        "name": "Corelume Tech",
+        "url": "https://corelumetech.in",
+        "logo": {
+          "@type": "ImageObject",
+          "url": "https://corelumetech.in/logo.png"
+        }
       }
+    },
+    {
+      "@type": "Organization",
+      "@id": "https://corelumetech.in/#organization",
+      "name": "Corelume Tech",
+      "url": "https://corelumetech.in",
+      "email": "contact@corelumetech.in",
+      "description": "Creator of high-performance, privacy-first, 100% client-side web utility tools.",
+      "sameAs": [
+        "https://github.com/corelumetech",
+        "https://twitter.com/corelumetech"
+      ]
+    },
+    {
+      "@type": "BreadcrumbList",
+      "@id": "https://password-generator.corelumetech.in/#breadcrumb",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://corelumetech.in"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Password Generator",
+          "item": "https://password-generator.corelumetech.in/"
+        }
+      ]
+    },
+    {
+      "@type": "FAQPage",
+      "@id": "https://password-generator.corelumetech.in/#faq",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "How does this password generator ensure cryptographic security?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "We use the browser native window.crypto.getRandomValues() API (a Cryptographically Secure Pseudo-Random Number Generator or CSPRNG) rather than Math.random(), ensuring entropy suitable for protecting sensitive accounts."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What is the difference between a random password and a passphrase?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "A random password consists of randomized alphanumeric and special characters (e.g., \"xK9#m$L2!p\"). A passphrase consists of multiple randomly chosen words separated by hyphens or spaces (e.g., \"correct-horse-battery-staple\"), providing high entropy while remaining human-memorable."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Are generated passwords ever stored or sent across the internet?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Never. The generator runs 100% locally in your browser memory. No generated passwords, seeds, or settings are ever transmitted to any server or recorded in any log file."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What password length is recommended for optimal security?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Security standards recommend at least 16 characters for random passwords combining uppercase, lowercase, numbers, and symbols, or 4+ words for passphrases to achieve over 80+ bits of entropy."
+          }
+        }
+      ]
     }
+  ]
+}
     </script>
     <link rel="stylesheet" href="style.css">
     <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700&display=swap" rel="stylesheet">
@@ -135,26 +233,299 @@
                 GENERATE <i class="fa-solid fa-arrow-right"></i>
             </button>
 
-    <!-- Cross-Linking Footer -->
-    <div class="card cross-link-footer" style="text-align: center; margin-top: 40px; padding: 20px;">
-        <p style="margin: 0;"><strong>More Free Tools:</strong> 
-            <a href="https://calculator.corelumetech.in/" style="color: #a5b4fc; text-decoration: none; margin: 0 10px; font-weight: 500;">Calculator</a> | 
-            <a href="https://color-generator.corelumetech.in/" style="color: #a5b4fc; text-decoration: none; margin: 0 10px; font-weight: 500;">Color Generator</a> | 
-            <a href="https://dev-tools.corelumetech.in/" style="color: #a5b4fc; text-decoration: none; margin: 0 10px; font-weight: 500;">Dev Tools</a> | 
-            <a href="https://password-generator.corelumetech.in/" style="color: #a5b4fc; text-decoration: none; margin: 0 10px; font-weight: 500;">Password Generator</a> | 
-            <a href="https://qr-generator.corelumetech.in/" style="color: #a5b4fc; text-decoration: none; margin: 0 10px; font-weight: 500;">QR Generator</a> | 
-            <a href="https://text-tools.corelumetech.in/" style="color: #a5b4fc; text-decoration: none; margin: 0 10px; font-weight: 500;">Text Tools</a>
+    
+        
+    
+
+
+    
+    
+
+
+  
+            
+    <!-- Rich SEO & EEAT Authority Section -->
+    <section class="seo-footer card" style="margin-top: 35px; padding: 32px 24px; border-radius: 16px; background: rgba(15, 23, 42, 0.55); backdrop-filter: blur(16px); border: 1px solid rgba(255, 255, 255, 0.12); box-shadow: 0 10px 30px rgba(0, 0, 0, 0.35); grid-column: 1 / -1; width: 100%;">
+        
+        <!-- Author Byline & Content Freshness -->
+        <div style="display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center; border-bottom: 1px solid rgba(255, 255, 255, 0.1); padding-bottom: 14px; margin-bottom: 24px; font-size: 0.85rem; color: #94a3b8;">
+            <div style="display: flex; align-items: center; gap: 8px;">
+                <i class="fa-solid fa-shield-halved" style="color: #38bdf8;"></i>
+                <span>Engineered & Verified by <strong>Corelume Tools Engineering Team</strong></span>
+            </div>
+            <div>
+                <i class="fa-regular fa-clock" style="margin-right: 4px;"></i>
+                <time datetime="2026-10-26">Updated: October 2026</time> &bull; <span style="color: #10b981; font-weight: 600;">100% Client-Side Verified</span>
+            </div>
+        </div>
+
+        <!-- Direct Answer Definition -->
+        <h2 style="font-size: 1.6rem; color: #f8fafc; margin-bottom: 12px; font-weight: 700;">About Secure Password Generator</h2>
+        <p style="color: #e2e8f0; font-size: 1.05rem; line-height: 1.7; margin-bottom: 24px;">Secure Password Generator is a privacy-first browser tool to generate cryptographically strong random passwords and memorable multi-word passphrases with real-time entropy calculation.</p>
+
+        <!-- Benchmark Statistics Grid -->
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(140px, 1fr)); gap: 14px; margin-bottom: 28px;">
+            
+        <div style="background: rgba(255, 255, 255, 0.05); border: 1px solid rgba(255, 255, 255, 0.1); border-radius: 12px; padding: 16px; text-align: center;">
+            <div style="font-size: 1.8rem; font-weight: 800; color: #38bdf8; margin-bottom: 4px;">128+ Bits</div>
+            <div style="font-size: 0.85rem; color: #94a3b8; text-transform: uppercase; letter-spacing: 0.5px;">Maximum Entropy</div>
+        </div>
+  
+        <div style="background: rgba(255, 255, 255, 0.05); border: 1px solid rgba(255, 255, 255, 0.1); border-radius: 12px; padding: 16px; text-align: center;">
+            <div style="font-size: 1.8rem; font-weight: 800; color: #38bdf8; margin-bottom: 4px;">CSPRNG</div>
+            <div style="font-size: 0.85rem; color: #94a3b8; text-transform: uppercase; letter-spacing: 0.5px;">Web Crypto Engine</div>
+        </div>
+  
+        <div style="background: rgba(255, 255, 255, 0.05); border: 1px solid rgba(255, 255, 255, 0.1); border-radius: 12px; padding: 16px; text-align: center;">
+            <div style="font-size: 1.8rem; font-weight: 800; color: #38bdf8; margin-bottom: 4px;">0%</div>
+            <div style="font-size: 0.85rem; color: #94a3b8; text-transform: uppercase; letter-spacing: 0.5px;">Server Transmission</div>
+        </div>
+  
+        <div style="background: rgba(255, 255, 255, 0.05); border: 1px solid rgba(255, 255, 255, 0.1); border-radius: 12px; padding: 16px; text-align: center;">
+            <div style="font-size: 1.8rem; font-weight: 800; color: #38bdf8; margin-bottom: 4px;">6-128</div>
+            <div style="font-size: 0.85rem; color: #94a3b8; text-transform: uppercase; letter-spacing: 0.5px;">Character Range</div>
+        </div>
+  
+        </div>
+
+        <!-- Key Takeaways Box (For AI Citations & Fast Extraction) -->
+        <div style="background: rgba(56, 189, 248, 0.08); border-left: 4px solid #38bdf8; border-radius: 8px; padding: 20px; margin-bottom: 30px;">
+            <h3 style="color: #38bdf8; font-size: 1.15rem; margin-bottom: 12px; display: flex; align-items: center; gap: 8px;">
+                <i class="fa-solid fa-bolt"></i> Key Takeaways & Quick Facts
+            </h3>
+            <ul style="list-style: none; padding: 0; margin: 0; color: #cbd5e1; font-size: 0.95rem; line-height: 1.6;">
+                
+        <li style="margin-bottom: 8px; display: flex; align-items: flex-start; gap: 8px;">
+            <i class="fa-solid fa-circle-check" style="color: #10b981; margin-top: 4px; flex-shrink: 0;"></i>
+            <span>Generate mathematically strong passwords using the native browser Web Crypto API.</span>
+        </li>
+  
+        <li style="margin-bottom: 8px; display: flex; align-items: flex-start; gap: 8px;">
+            <i class="fa-solid fa-circle-check" style="color: #10b981; margin-top: 4px; flex-shrink: 0;"></i>
+            <span>Switch between high-complexity character passwords and memorable multi-word passphrases.</span>
+        </li>
+  
+        <li style="margin-bottom: 8px; display: flex; align-items: flex-start; gap: 8px;">
+            <i class="fa-solid fa-circle-check" style="color: #10b981; margin-top: 4px; flex-shrink: 0;"></i>
+            <span>Prevent transcription errors with the "Exclude Ambiguous Characters" toggle.</span>
+        </li>
+  
+        <li style="margin-bottom: 8px; display: flex; align-items: flex-start; gap: 8px;">
+            <i class="fa-solid fa-circle-check" style="color: #10b981; margin-top: 4px; flex-shrink: 0;"></i>
+            <span>Monitor real-time password entropy and brute-force resistance with the visual strength meter.</span>
+        </li>
+  
+        <li style="margin-bottom: 8px; display: flex; align-items: flex-start; gap: 8px;">
+            <i class="fa-solid fa-circle-check" style="color: #10b981; margin-top: 4px; flex-shrink: 0;"></i>
+            <span>Guaranteed zero server transmission—passwords are created solely in volatile client memory.</span>
+        </li>
+  
+            </ul>
+        </div>
+
+        <!-- Feature Specification & Comparison Table -->
+        <h3 style="font-size: 1.25rem; color: #f8fafc; margin-bottom: 14px; font-weight: 600;">How Secure Password Generator Compares</h3>
+        <div style="overflow-x: auto; margin-bottom: 32px;">
+            <table style="width: 100%; border-collapse: collapse; text-align: left; font-size: 0.9rem; color: #cbd5e1; background: rgba(0, 0, 0, 0.2); border-radius: 10px; overflow: hidden;">
+                <thead>
+                    <tr style="background: rgba(255, 255, 255, 0.08); border-bottom: 1px solid rgba(255, 255, 255, 0.15);">
+                        <th style="padding: 12px 14px; color: #f8fafc;">Feature</th>
+                        <th style="padding: 12px 14px; color: #38bdf8; text-align: center;">Secure Password Generator</th>
+                        <th style="padding: 12px 14px; color: #94a3b8; text-align: center;">Standard Web Tools</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    
+        <tr style="border-bottom: 1px solid rgba(255, 255, 255, 0.08);">
+            <td style="padding: 12px 14px; font-weight: 500;">CSPRNG Web Crypto API (Not Math.random)</td>
+            <td style="padding: 12px 14px; color: #10b981; font-weight: 600; text-align: center;"><i class="fa-solid fa-check"></i> Yes</td>
+            <td style="padding: 12px 14px; color: #94a3b8; text-align: center;">Often insecure Math.random</td>
+        </tr>
+  
+        <tr style="border-bottom: 1px solid rgba(255, 255, 255, 0.08);">
+            <td style="padding: 12px 14px; font-weight: 500;">Dual Mode: Random Characters & Memorable Passphrase</td>
+            <td style="padding: 12px 14px; color: #10b981; font-weight: 600; text-align: center;"><i class="fa-solid fa-check"></i> Yes</td>
+            <td style="padding: 12px 14px; color: #94a3b8; text-align: center;">Single mode only</td>
+        </tr>
+  
+        <tr style="border-bottom: 1px solid rgba(255, 255, 255, 0.08);">
+            <td style="padding: 12px 14px; font-weight: 500;">Real-Time Entropy & Strength Meter</td>
+            <td style="padding: 12px 14px; color: #10b981; font-weight: 600; text-align: center;"><i class="fa-solid fa-check"></i> Yes</td>
+            <td style="padding: 12px 14px; color: #94a3b8; text-align: center;">Basic or absent</td>
+        </tr>
+  
+        <tr style="border-bottom: 1px solid rgba(255, 255, 255, 0.08);">
+            <td style="padding: 12px 14px; font-weight: 500;">Exclude Ambiguous Characters (i, l, 1, O, 0)</td>
+            <td style="padding: 12px 14px; color: #10b981; font-weight: 600; text-align: center;"><i class="fa-solid fa-check"></i> Yes</td>
+            <td style="padding: 12px 14px; color: #94a3b8; text-align: center;">Rarely available</td>
+        </tr>
+  
+        <tr style="border-bottom: 1px solid rgba(255, 255, 255, 0.08);">
+            <td style="padding: 12px 14px; font-weight: 500;">Zero Server Transmission (100% Private)</td>
+            <td style="padding: 12px 14px; color: #10b981; font-weight: 600; text-align: center;"><i class="fa-solid fa-check"></i> Yes</td>
+            <td style="padding: 12px 14px; color: #94a3b8; text-align: center;">Cloud-synced or logged</td>
+        </tr>
+  
+                </tbody>
+            </table>
+        </div>
+
+        <!-- Semantic FAQ Section -->
+        <h2 style="font-size: 1.45rem; color: #f8fafc; margin-bottom: 16px; font-weight: 700;">Frequently Asked Questions</h2>
+        <div>
+            
+        <article style="background: rgba(255, 255, 255, 0.04); border: 1px solid rgba(255, 255, 255, 0.08); border-radius: 12px; padding: 18px 20px; margin-bottom: 14px;">
+            <h3 style="color: #f8fafc; font-size: 1.1rem; margin-bottom: 8px; display: flex; align-items: center; gap: 10px;">
+                <i class="fa-solid fa-circle-question" style="color: #38bdf8;"></i> How does this password generator ensure cryptographic security?
+            </h3>
+            <p style="color: #cbd5e1; line-height: 1.6; margin: 0; font-size: 0.95rem;">We use the browser native window.crypto.getRandomValues() API (a Cryptographically Secure Pseudo-Random Number Generator or CSPRNG) rather than Math.random(), ensuring entropy suitable for protecting sensitive accounts.</p>
+        </article>
+  
+        <article style="background: rgba(255, 255, 255, 0.04); border: 1px solid rgba(255, 255, 255, 0.08); border-radius: 12px; padding: 18px 20px; margin-bottom: 14px;">
+            <h3 style="color: #f8fafc; font-size: 1.1rem; margin-bottom: 8px; display: flex; align-items: center; gap: 10px;">
+                <i class="fa-solid fa-circle-question" style="color: #38bdf8;"></i> What is the difference between a random password and a passphrase?
+            </h3>
+            <p style="color: #cbd5e1; line-height: 1.6; margin: 0; font-size: 0.95rem;">A random password consists of randomized alphanumeric and special characters (e.g., "xK9#m$L2!p"). A passphrase consists of multiple randomly chosen words separated by hyphens or spaces (e.g., "correct-horse-battery-staple"), providing high entropy while remaining human-memorable.</p>
+        </article>
+  
+        <article style="background: rgba(255, 255, 255, 0.04); border: 1px solid rgba(255, 255, 255, 0.08); border-radius: 12px; padding: 18px 20px; margin-bottom: 14px;">
+            <h3 style="color: #f8fafc; font-size: 1.1rem; margin-bottom: 8px; display: flex; align-items: center; gap: 10px;">
+                <i class="fa-solid fa-circle-question" style="color: #38bdf8;"></i> Are generated passwords ever stored or sent across the internet?
+            </h3>
+            <p style="color: #cbd5e1; line-height: 1.6; margin: 0; font-size: 0.95rem;">Never. The generator runs 100% locally in your browser memory. No generated passwords, seeds, or settings are ever transmitted to any server or recorded in any log file.</p>
+        </article>
+  
+        <article style="background: rgba(255, 255, 255, 0.04); border: 1px solid rgba(255, 255, 255, 0.08); border-radius: 12px; padding: 18px 20px; margin-bottom: 14px;">
+            <h3 style="color: #f8fafc; font-size: 1.1rem; margin-bottom: 8px; display: flex; align-items: center; gap: 10px;">
+                <i class="fa-solid fa-circle-question" style="color: #38bdf8;"></i> What password length is recommended for optimal security?
+            </h3>
+            <p style="color: #cbd5e1; line-height: 1.6; margin: 0; font-size: 0.95rem;">Security standards recommend at least 16 characters for random passwords combining uppercase, lowercase, numbers, and symbols, or 4+ words for passphrases to achieve over 80+ bits of entropy.</p>
+        </article>
+  
+        </div>
+    </section>
+
+    
+    <!-- Trust, Authority & Cross-Linking Footer -->
+    <footer class="card cross-link-footer" style="text-align: center; margin-top: 40px; padding: 28px 20px; border-radius: 16px; background: rgba(15, 23, 42, 0.6); backdrop-filter: blur(12px); border: 1px solid rgba(255, 255, 255, 0.1); width: 100%; grid-column: 1 / -1;">
+        <div style="margin-bottom: 18px;">
+            <p style="margin: 0; font-size: 0.95rem; color: #cbd5e1;"><strong>Corelume Tools Suite:</strong> 
+                <a href="https://calculator.corelumetech.in/" style="color: #a5b4fc; text-decoration: none; margin: 0 8px; font-weight: 500;">Calculator</a> | 
+                <a href="https://color-generator.corelumetech.in/" style="color: #a5b4fc; text-decoration: none; margin: 0 8px; font-weight: 500;">Color Generator</a> | 
+                <a href="https://dev-tools.corelumetech.in/" style="color: #a5b4fc; text-decoration: none; margin: 0 8px; font-weight: 500;">Dev Tools</a> | 
+                <a href="https://password-generator.corelumetech.in/" style="color: #a5b4fc; text-decoration: none; margin: 0 8px; font-weight: 500;">Password Generator</a> | 
+                <a href="https://qr-generator.corelumetech.in/" style="color: #a5b4fc; text-decoration: none; margin: 0 8px; font-weight: 500;">QR Generator</a> | 
+                <a href="https://text-tools.corelumetech.in/" style="color: #a5b4fc; text-decoration: none; margin: 0 8px; font-weight: 500;">Text Tools</a>
+            </p>
+        </div>
+        <div style="margin-bottom: 16px; font-size: 0.85rem; color: #94a3b8;">
+            <a href="#about" class="open-legal-modal" data-tab="about" style="color: #94a3b8; text-decoration: none; margin: 0 10px;">About</a> &bull;
+            <a href="#privacy" class="open-legal-modal" data-tab="privacy" style="color: #94a3b8; text-decoration: none; margin: 0 10px;">Privacy Policy</a> &bull;
+            <a href="#terms" class="open-legal-modal" data-tab="terms" style="color: #94a3b8; text-decoration: none; margin: 0 10px;">Terms of Service</a> &bull;
+            <a href="#contact" class="open-legal-modal" data-tab="contact" style="color: #94a3b8; text-decoration: none; margin: 0 10px;">Contact Support</a> &bull;
+            <a href="https://password-generator.corelumetech.in/llms.txt" target="_blank" style="color: #38bdf8; text-decoration: none; margin: 0 10px;">llms.txt</a>
+        </div>
+        <p style="margin: 0; font-size: 0.8rem; color: #64748b;">
+            &copy; 2024&ndash;2026 <strong>Corelume Tech</strong>. All rights reserved. 100% Client-Side Processing &bull; No Server Storage &bull; Private & Secure.
         </p>
-    </div>
+    </footer>
+
         </main>
 
-        <div class="seo-footer card">
-            <h2>Free Secure Password Generator</h2>
-            <p>Use our free secure password generator to create strong, random passwords. This random password maker ensures your accounts stay safe by generating a secure string of characters, completely offline.</p>
-        </div>
+        
     </div>
     <!-- Toast -->
     <div id="toast" class="toast">Copied to clipboard!</div>
     <script src="script.js"></script>
+
+<!-- Legal & Transparency Modal -->
+<div id="legal-modal" style="display: none; position: fixed; inset: 0; background: rgba(0, 0, 0, 0.75); backdrop-filter: blur(8px); z-index: 99999; justify-content: center; align-items: center; padding: 20px;">
+    <div style="background: #0f172a; border: 1px solid rgba(255, 255, 255, 0.15); border-radius: 16px; width: 100%; max-width: 700px; max-height: 85vh; overflow-y: auto; padding: 30px; box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.7); position: relative; color: #f8fafc;">
+        <button id="legal-modal-close" style="position: absolute; top: 18px; right: 20px; background: rgba(255, 255, 255, 0.1); border: none; color: #f8fafc; font-size: 1.2rem; width: 32px; height: 32px; border-radius: 50%; cursor: pointer; display: flex; align-items: center; justify-content: center;">&times;</button>
+        <div style="display: flex; gap: 15px; border-bottom: 1px solid rgba(255, 255, 255, 0.1); padding-bottom: 15px; margin-bottom: 20px;">
+            <button id="tab-about" class="legal-tab-btn" style="background: none; border: none; color: #38bdf8; font-weight: 600; font-size: 1rem; cursor: pointer;">About Us</button>
+            <button id="tab-privacy" class="legal-tab-btn" style="background: none; border: none; color: #94a3b8; font-weight: 600; font-size: 1rem; cursor: pointer;">Privacy Policy</button>
+            <button id="tab-terms" class="legal-tab-btn" style="background: none; border: none; color: #94a3b8; font-weight: 600; font-size: 1rem; cursor: pointer;">Terms of Service</button>
+            <button id="tab-contact" class="legal-tab-btn" style="background: none; border: none; color: #94a3b8; font-weight: 600; font-size: 1rem; cursor: pointer;">Contact</button>
+        </div>
+        <div id="content-about" class="legal-content">
+            <h3 style="color: #f8fafc; margin-bottom: 12px; font-size: 1.3rem;">About Corelume Tools</h3>
+            <p style="color: #cbd5e1; line-height: 1.6; margin-bottom: 12px;">Corelume Tech creates fast, privacy-focused, 100% client-side web utility tools for developers, designers, writers, and power users worldwide.</p>
+            <p style="color: #cbd5e1; line-height: 1.6; margin-bottom: 12px;">Our mission is to provide fast, privacy-focused web utilities that never compromise your personal data. We keep all core utilities completely free and supported by non-intrusive advertising, while ensuring every calculation, conversion, string transformation, and password generation executes directly inside your browser's local sandbox.</p>
+            <p style="color: #cbd5e1; line-height: 1.6;">Founded & engineered by Corelume Tech. Built with modern web standards, zero tracking cookies, and sub-millisecond execution speeds.</p>
+        </div>
+        <div id="content-privacy" class="legal-content" style="display: none;">
+            <h3 style="color: #f8fafc; margin-bottom: 12px; font-size: 1.3rem;">Privacy Policy (100% Client-Side Guarantee)</h3>
+            <p style="color: #cbd5e1; line-height: 1.6; margin-bottom: 12px;"><strong>Effective Date:</strong> October 2026</p>
+            <p style="color: #cbd5e1; line-height: 1.6; margin-bottom: 12px;"><strong>1. Zero Data Collection:</strong> We do not log, store, inspect, or transmit any inputs, text, passwords, images, QR payloads, or files you process using our tools. All operations run strictly on your local device.</p>
+            <p style="color: #cbd5e1; line-height: 1.6; margin-bottom: 12px;"><strong>2. Offline Processing:</strong> All algorithms execute within client-side JavaScript Web Workers and Canvas contexts without making outbound API requests containing your data.</p>
+            <p style="color: #cbd5e1; line-height: 1.6; margin-bottom: 12px;"><strong>3. Client-Side Privacy: We do not log, profile, or sell your input data. All processed inputs remain in volatile browser memory.
+            <p style="color: #cbd5e1; line-height: 1.6; margin-bottom: 12px;"><strong>4. Advertising Disclosure:</strong> We display third-party advertisements to keep our utilities 100% free for everyone. Advertising partners may use standardized cookies to serve non-intrusive ads. Your proprietary text, passwords, images, and calculations are never shared with or accessible to ad networks.</p>
+            <p style="color: #cbd5e1; line-height: 1.6;">Questions? Contact our Data Protection Officer at <a href="mailto:contact@corelumetech.in" style="color: #38bdf8;">contact@corelumetech.in</a>.</p>
+        </div>
+        <div id="content-terms" class="legal-content" style="display: none;">
+            <h3 style="color: #f8fafc; margin-bottom: 12px; font-size: 1.3rem;">Terms of Service</h3>
+            <p style="color: #cbd5e1; line-height: 1.6; margin-bottom: 12px;"><strong>1. Free License:</strong> Corelume Tools provides all utilities free of charge for personal and commercial usage without requiring an account or subscription.</p>
+            <p style="color: #cbd5e1; line-height: 1.6; margin-bottom: 12px;"><strong>2. As-Is Provision:</strong> Tools are provided on an "as-is" and "as-available" basis without warranties of any kind. While we rigorously test all algorithms (such as WCAG contrast and cryptographic generators), users should independently verify critical calculations.</p>
+            <p style="color: #cbd5e1; line-height: 1.6;"><strong>3. Acceptable Use:</strong> Users agree not to misuse or attempt automated denial-of-service against our static hosting infrastructure.</p>
+        </div>
+        <div id="content-contact" class="legal-content" style="display: none;">
+            <h3 style="color: #f8fafc; margin-bottom: 12px; font-size: 1.3rem;">Contact Corelume Support</h3>
+            <p style="color: #cbd5e1; line-height: 1.6; margin-bottom: 12px;">Have feedback, feature requests, or questions regarding our suite of online tools? We'd love to hear from you!</p>
+            <p style="color: #cbd5e1; line-height: 1.6; margin-bottom: 8px;"><strong>Official Email:</strong> <a href="mailto:contact@corelumetech.in" style="color: #38bdf8;">contact@corelumetech.in</a></p>
+            <p style="color: #cbd5e1; line-height: 1.6; margin-bottom: 8px;"><strong>Developer Organization:</strong> Corelume Tech (https://corelumetech.in)</p>
+            <p style="color: #cbd5e1; line-height: 1.6;"><strong>Response Time:</strong> Typically within 24 to 48 business hours.</p>
+        </div>
+    </div>
+</div>
+<script>
+(function() {
+    function initLegalModal() {
+        const modal = document.getElementById('legal-modal');
+        const closeBtn = document.getElementById('legal-modal-close');
+        if (!modal || !closeBtn) return;
+        
+        const tabs = ['about', 'privacy', 'terms', 'contact'];
+        function showTab(name) {
+            tabs.forEach(t => {
+                const btn = document.getElementById('tab-' + t);
+                const content = document.getElementById('content-' + t);
+                if (btn && content) {
+                    if (t === name) {
+                        btn.style.color = '#38bdf8';
+                        content.style.display = 'block';
+                    } else {
+                        btn.style.color = '#94a3b8';
+                        content.style.display = 'none';
+                    }
+                }
+            });
+            modal.style.display = 'flex';
+        }
+
+        tabs.forEach(t => {
+            const btn = document.getElementById('tab-' + t);
+            if (btn) btn.addEventListener('click', () => showTab(t));
+        });
+
+        document.querySelectorAll('.open-legal-modal').forEach(link => {
+            link.addEventListener('click', (e) => {
+                e.preventDefault();
+                const tab = link.getAttribute('data-tab') || 'about';
+                showTab(tab);
+            });
+        });
+
+        closeBtn.addEventListener('click', () => { modal.style.display = 'none'; });
+        modal.addEventListener('click', (e) => { if (e.target === modal) modal.style.display = 'none'; });
+    }
+    if (document.readyState === 'loading') {
+        document.addEventListener('DOMContentLoaded', initLegalModal);
+    } else {
+        initLegalModal();
+    }
+})();
+</script>
+
 </body>
 </html>

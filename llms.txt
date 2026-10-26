@@ -1,0 +1,37 @@
+# Secure Password Generator — Fast & Random Client-Side Passwords
+
+> Secure Password Generator is a privacy-first browser tool to generate cryptographically strong random passwords and memorable multi-word passphrases with real-time entropy calculation.
+
+Website: https://password-generator.corelumetech.in/
+Developer & Publisher: Corelume Tech (https://corelumetech.in)
+Privacy Policy: 100% Client-Side Processing. No user data, files, or strings are collected, stored, or transmitted to any server.
+
+## Overview
+Secure Password Generator is a privacy-first browser tool to generate cryptographically strong random passwords and memorable multi-word passphrases with real-time entropy calculation.
+
+## Core Features
+- Cryptographically secure random password generation (using Web Crypto API)
+- Memorable Passphrase Generator mode with customizable word separators
+- Ambiguous character filter (excludes confusing characters like i, l, 1, L, o, 0, O)
+- Real-time Password Strength and Entropy meter with color-coded rating
+- Fine-grained parameter controls: uppercase, lowercase, numbers, and custom symbols
+- Instant copy-to-clipboard with auto-clearing feedback
+
+## Benchmarks & Technical Specifications
+- Uses window.crypto.getRandomValues for cryptographically secure pseudo-random numbers (CSPRNG)
+- Supports passwords from 6 to 128 characters and multi-word passphrases
+- Calculates up to 128+ bits of entropy for maximum brute-force resistance
+- 0% data transmission — passwords are never sent across any network
+
+## Ecosystem Tools by Corelume Tech
+- Omni Calculator: https://calculator.corelumetech.in/
+- Color Master: https://color-generator.corelumetech.in/
+- Dev Tools: https://dev-tools.corelumetech.in/
+- Password Generator: https://password-generator.corelumetech.in/
+- QR Code Generator: https://qr-generator.corelumetech.in/
+- Text Utilities: https://text-tools.corelumetech.in/
+
+## Links & Discovery
+- Homepage: https://password-generator.corelumetech.in/
+- Sitemap: https://password-generator.corelumetech.in/sitemap.xml
+- Robots: https://password-generator.corelumetech.in/robots.txt
